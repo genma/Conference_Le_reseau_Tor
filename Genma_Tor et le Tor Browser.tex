@@ -28,7 +28,7 @@
 \justifying
 \input{cc_beamer}
 \title[Tor et le Tor Browser Bundle]{Ubuntu Party \\ Le réseau Tor} 
-\author{Genma - Café vie privée}
+\author{Genma}
 \begin{document}
 %% Titlepage
 \begin{frame}
@@ -52,11 +52,6 @@
 \begin{itemize}
 \item Le Blog de Genma : http://genma.free.fr
 \item Twitter : http://twitter.com/genma
-\end{itemize}
-\textbf{Mes centres d'intérêts?}
-\\ Plein de choses dont:
-\begin{itemize}
-\item Organiser des Cafés vie privée
 \end{itemize}
 \column{.5\textwidth} 
 \includegraphics[width=5cm,height=5cm]{./images/blog.png} 
@@ -113,14 +108,6 @@ $\Rightarrow$ Tor dispose également d'un système de « services cachés » qui
 \end{frame}
 %----------------------------------------------------------------------------------------
 \begin{frame}
-\frametitle{A quoi sert TOR?}
-Tor est un réseau d'anonymisation, donc par définition, c'est difficile de faire un compte
-précis.Tor ne fait rien pour cacher que nous utilisons Tor. Donc quand en utilisant
-Tor, nous nous mettons au milieu de la foule des gens qui utilisent Tor. Plus
-cette foule est grande, meilleur est l'anonymat.
-\end{frame}
-%----------------------------------------------------------------------------------------
-\begin{frame}
 \begin{center}
 \Huge{Comment fonctionne Tor ? }
 \\~\\ \includegraphics[scale=0.4]{./images/logo_tor.jpg}
@@ -150,16 +137,14 @@ cette foule est grande, meilleur est l'anonymat.
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Comment fonctionne Tor ?}
-Ce tunnels se fait « en oignon » avec des couches de chiffrement empilées. Il y a une première
-clé de chiffrement vers le nœud d'entrée, une second clé vers le nœud du milieu et
+
+\begin{itemize}
+\item Tor fait un routage en oignion avec des couches de chiffrement empilées.
+\item Il y a une première clé de chiffrement vers le nœud d'entrée, une second clé vers le nœud du milieu et
 une dernière pour le nœud de sortie.
-\\
-Il faut noter que Tor ne s'occupe pas de chiffrer après le nœud de sortie. Comme n'importe
-qui peut mettre en place un nœud de sortie, c'est une bonne idée de chiffrer sa communication
-en plus (par exemple en se connectant aux sites web que l'on visite en HTTPS).
-\\
-Après, se déroule tout un processus pour établir un tunnel chiffré jusqu'au
-nœud de sortie.
+\end{itemize}
+$\Rightarrow$ Tor ne chiffre pas après le noeud de sortie.
+$\Rightarrow$ Il faut utiliser une connexion httpS.
 \end{frame}
 %----------------------------------------------------------------------------------------
 \begin{frame}
@@ -179,6 +164,65 @@ Tor permet aux clients et aux relais d’offrir des services cachés.Il est poss
 \item Facebook, Wikipeida, des blogs...
 \end{itemize}
 \end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Analogie pour bien comprendre}
+\\~\\ \includegraphics[scale=0.4]{./images/logo_tor.jpg}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Cas 1 - Http}
+ \justifying{
+Imaginer une zone pavillonnaire avec différentes maisons dont celle de votre ami.
+\begin{itemize}
+\item Toutes les maisons ont des murs transparents.
+\item On vous voit aller chez lui, on peut entendre ce que vous dites et voir ce que vous faîtes.
+\end{itemize}
+Il s'agit là d'une connexion http à un site web.
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cas 2 - Https}
+ \justifying{
+Les maisons ont des murs pleins.
+\begin{itemize}
+\item On vous voit aller chez lui, mais on peut plus entendre ce que vous dites et voir ce que vous faites (on met de côté l’aspect micro/caméra).
+\item  Mais on sait à quelle heure vous êtes venu le voir et quand vous repartez.
+\end{itemize}
+Il s'agit là d'une connexion https à un site web.
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cas 3 - Connexion via TOR}
+ \justifying{
+Dans la zone pavillonnaire, il y a des maisons ’Tor’ qui sont un peu particulières. 
+À savoir : elles ont forcément des murs pleins et ’Tor’ écrit dessus.
+\begin{itemize}
+\item  vous entrez dans une première maison Tor, et en ressortez avec un déguisement, 
+\item  puis vous entrez dans une seconde maison au hasard et en ressortez avec un autre déguisement
+\item et entrez enfin dans une troisième maison au hasard et en ressortez avec un autre déguisement
+\end{itemize}
+Et quand on sort déguisé de la dernière maison ’Tor’, on va chez l’ami qui peut avoir des murs pleins ou des murs transparents mais ce n’est pas une maison ’Tor’.
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cas 4 - les Hidden Services}
+ \justifying{
+\begin{itemize}
+\item Vous entrez dans différentes maisons TOR, en ressortez déguisez.
+\item Sauf qu'à la dernière maison, vous y entrez par la porte située à l'arrière de la maison, côté jardin.
+\end{itemize}
+On ne voit même pas que vous êtes entré et resté dans cette dernière maison...
+}
+\end{frame}
+
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \begin{center}
@@ -255,7 +299,8 @@ Pour Ubuntu, GNU/Linux c'est un programme autonome/portable. (On peut aussi l'in
 \begin{block}{Pour la vie privée}
 \begin{itemize}
  \justifying{
-\item Visualisation et changement de circuit par onglets
+\item Visualisation du circuit emprunté (désactivable)
+\item Changement de circuit par onglets 
 \item Cloisonnement des applications tierces à l'onglet
 \item Moteur de recherche par défaut : Disconnect (fournit des résultats de recherche Google)
 }
@@ -379,7 +424,7 @@ Vous devrez changer quelques-unes de vos habitudes, et certaines choses ne march
 \end{frame}
 %---------------------------------------------------------------------------------------
 \begin{frame}
-\frametitle{Soutenir le projet Tor}
+\frametitle{Soutenir le projet Tor 1/2}
 Il existe l'association NosOignons.net, qui propose des nœuds de sortie Tor financés par la communauté.
 \url{https://nos-oignons.net}
 \begin{itemize}
@@ -389,15 +434,17 @@ Il existe l'association NosOignons.net, qui propose des nœuds de sortie Tor fin
 \item Faire des tutoriaux, de la traduction, contibuez au code...
 \end{itemize}
 \end{frame}
-%------------------------------------------------
+
+%---------------------------------------------------------------------------------------
 \begin{frame}
-\frametitle{Les cafés vie privée}
+\frametitle{Soutenir le projet Tor 2/2}
+
 \begin{center}
-\includegraphics[scale=0.4]{./images/LogoCafeViePrivee.jpg}
-\\ \url{https://café-vie-privée.fr/}
-\\ @chiffrofete \#cafevieprivee
+\includegraphics[scale=0.25]{./images/jeu_tor.jpg}
 \end{center}
+
 \end{frame}
+
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \begin{center}
