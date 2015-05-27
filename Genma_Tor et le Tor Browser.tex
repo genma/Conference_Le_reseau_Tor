@@ -94,6 +94,7 @@ $\Rightarrow$ Techniquement, Tor nous permet de se connecter à des machines sur
 \frametitle{A quoi sert TOR?}
 Concrêtement, ça sert pour :
 \begin{itemize}
+\justifying{
 \item  échapper au fichage publicitaire,
 \item  publier des informations sous un pseudonyme,
 \item  accéder à des informations en laissant moins de traces,
@@ -101,8 +102,11 @@ Concrêtement, ça sert pour :
 \item  communiquer en déjouant des dispositifs de surveillances,
 \item  tester son pare-feu,
 \item  … et sûrement encore d'autres choses.
+}
 \end{itemize}
+\justifying{
 $\Rightarrow$ Tor dispose également d'un système de « services cachés » qui permet de fournir un service en cachant l'emplacement du serveur.
+}
 \end{frame}
 %----------------------------------------------------------------------------------------
 \begin{frame}
@@ -137,12 +141,16 @@ $\Rightarrow$ Tor dispose également d'un système de « services cachés » qui
 \frametitle{Comment fonctionne Tor ?}
 
 \begin{itemize}
+\justifying{
 \item Tor fait un routage en oignion avec des couches de chiffrement empilées.
 \item Il y a une première clé de chiffrement vers le nœud d'entrée, une second clé vers le nœud du milieu et
 une dernière pour le nœud de sortie.
+}
 \end{itemize}
+\justifying{
 $\Rightarrow$ Tor ne chiffre pas après le noeud de sortie.
 $\Rightarrow$ Il faut utiliser une connexion httpS.
+}
 \end{frame}
 %----------------------------------------------------------------------------------------
 \begin{frame}
@@ -154,12 +162,16 @@ $\Rightarrow$ Il faut utiliser une connexion httpS.
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Tor hidden service - les services cachés de TOR}
+\justifying{
 Tor permet aux clients et aux relais d’offrir des services cachés.Il est possible d'offrir un serveur web, un serveur SSH, etc, sans révéler son adresse IP aux utilisateurs.
+}
 \begin{itemize}
+\justifying{
 \item Tous ces sites ne sont accessibles que via le réseau Tor.
 \item Ils portent une adresse qui se termine par .onion.
 \item Des wikis et moteurs de recherches référencient ces services.
-\item Facebook, Wikipeida, des blogs...
+\item Facebook, Wikipedia, des blogs...
+}
 \end{itemize}
 \end{frame}
 
@@ -176,22 +188,28 @@ Tor permet aux clients et aux relais d’offrir des services cachés.Il est poss
 \frametitle{Cas 1 - Http}
  \justifying{
 Imaginer une zone pavillonnaire avec différentes maisons dont celle de votre ami.
+}
 \begin{itemize}
+\justifying{
 \item Toutes les maisons ont des murs transparents.
 \item On vous voit aller chez lui, on peut entendre ce que vous dites et voir ce que vous faîtes.
-\end{itemize}
-Il s'agit là d'une connexion http à un site web.
 }
+\end{itemize}
+\justifying{Il s'agit là d'une connexion http à un site web.}
 \end{frame}
 
 \begin{frame}
 \frametitle{Cas 2 - Https}
  \justifying{
 Les maisons ont des murs pleins.
+}
 \begin{itemize}
+\justifying{
 \item On vous voit aller chez lui, mais on peut plus entendre ce que vous dites et voir ce que vous faites (on met de côté l’aspect micro/caméra).
 \item  Mais on sait à quelle heure vous êtes venu le voir et quand vous repartez.
+}
 \end{itemize}
+\justifying{
 Il s'agit là d'une connexion https à un site web.
 }
 \end{frame}
@@ -201,22 +219,28 @@ Il s'agit là d'une connexion https à un site web.
  \justifying{
 Dans la zone pavillonnaire, il y a des maisons ’Tor’ qui sont un peu particulières. 
 À savoir : elles ont forcément des murs pleins et ’Tor’ écrit dessus.
+}
 \begin{itemize}
+\justifying{
 \item  vous entrez dans une première maison Tor, et en ressortez avec un déguisement, 
 \item  puis vous entrez dans une seconde maison au hasard et en ressortez avec un autre déguisement
-\item et entrez enfin dans une troisième maison au hasard et en ressortez avec un autre déguisement
+\item et entrez enfin dans une troisième maison au hasard et en ressortez avec un autre déguisement.
+}
 \end{itemize}
+\justifying{
 Et quand on sort déguisé de la dernière maison ’Tor’, on va chez l’ami qui peut avoir des murs pleins ou des murs transparents mais ce n’est pas une maison ’Tor’.
 }
 \end{frame}
 
 \begin{frame}
 \frametitle{Cas 4 - les Hidden Services}
- \justifying{
 \begin{itemize}
-\item Vous entrez dans différentes maisons TOR, en ressortez déguisez.
+\justifying{
+\item Vous entrez dans différentes maisons TOR, en ressortez déguisé.
 \item Sauf qu'à la dernière maison, vous y entrez par la porte située à l'arrière de la maison, côté jardin.
+}
 \end{itemize}
+\justifying{
 On ne voit même pas que vous êtes entré et resté dans cette dernière maison...
 }
 \end{frame}
@@ -231,10 +255,12 @@ On ne voit même pas que vous êtes entré et resté dans cette dernière maison
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Utiliser Tor - Le Tor Browser}
+\justifying{
 Le Tor Browser est une version Extended Support de Firefox, auxquelles sont ajoutée les extensions préconfigurées permettant qu’au lancement du navigateur, celui-ci se connecte à Tor. 
 \\$\Rightarrow$ Ainsi, toute la navigation qui se fait via ce navigateur est faite au travers du réseau Tor. 
 \\$\Rightarrow$ Toutes les versions (dans différentes langues, différents OS) sont disponibles sur le site du projet : 
 \\ \url{https://www.torproject.org/}
+}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -369,10 +395,12 @@ Pour avoir un Tor Browser toujours à jour, on peut installer le Tor Browser Lau
 \frametitle{Tor Browser Launcher}
 Il gère : 
 \begin{itemize}
+\justifying{
 \item le téléchargement de la version la plus récente de TBB, dans votre langue et pour votre architecture
 \item la mise à jour automatique (tout en conservant vos signets et préférences) manuel
 \item la vérification de la signature GnuPG du TBB (pour être sûr de l’intégrité des fichiers)
 \item ajoute un lanceur d’application "Tor Browser" dans le menu de votre environnement de bureau.
+}
 \end{itemize}
 \end{frame}
 %----------------------------------------------------------------------------------------
@@ -405,12 +433,16 @@ Tails (The Amnesic Incognito Live System) est un système d'exploitation complet
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Vous voulez que Tor marche vraiment ?}
+\justifying{
 Vous devrez changer quelques-unes de vos habitudes, et certaines choses ne marcheront pas exactement comme vous le voudrez.
+}
 \begin{itemize}
+\justifying{
 \item Ne faîte pas de Torrent via Tor
 \item N'activez pas et n'installez pas de plugins dans le navigateur
 \item Utiliser la version HTTPS des sites webs
 \item Ne consultez pas/n'ouvrez pas de documents téléchargé pendant que vous êtes connecté via Tor
+}
 \end{itemize}
 \end{frame}
 %----------------------------------------------------------------------------------------
@@ -423,13 +455,17 @@ Vous devrez changer quelques-unes de vos habitudes, et certaines choses ne march
 %---------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Soutenir le projet Tor 1/2}
+\justifying{
 Il existe l'association NosOignons.net, qui propose des nœuds de sortie Tor financés par la communauté.
 \url{https://nos-oignons.net}
+}
 \begin{itemize}
+\justifying{
 \item En parler
 \item Faire un don à NosOignons
 \item Devenir membre de la communauté
 \item Faire des tutoriaux, de la traduction, contibuez au code...
+}
 \end{itemize}
 \end{frame}
 
